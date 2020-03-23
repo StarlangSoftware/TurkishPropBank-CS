@@ -15,18 +15,20 @@ namespace PropBank
          * <param name="id"> Id of the roleSet</param>
          * <param name="name">Name of the roleSet</param>
          */
-        public RoleSet(string id, string name){
+        public RoleSet(string id, string name)
+        {
             this._id = id;
             this._name = name;
             _roles = new List<Role>();
         }
-        
+
         /**
          * <summary>Accessor for id.</summary>
          *
          * <returns>id.</returns>
          */
-        public string GetId(){
+        public string GetId()
+        {
             return _id;
         }
 
@@ -35,7 +37,8 @@ namespace PropBank
          *
          * <returns>name.</returns>
          */
-        public string GetName(){
+        public string GetName()
+        {
             return _name;
         }
 
@@ -44,7 +47,8 @@ namespace PropBank
          *
          * <param name="role"> Role to be added</param>
          */
-        public void AddRole(Role role){
+        public void AddRole(Role role)
+        {
             _roles.Add(role);
         }
 
@@ -54,7 +58,8 @@ namespace PropBank
          * <param name="index"> Index of the role</param>
          * <returns>{@link Role} at the given index.</returns>
          */
-        public Role GetRole(int index){
+        public Role GetRole(int index)
+        {
             return _roles[index];
         }
 
@@ -64,13 +69,16 @@ namespace PropBank
          * <param name="n">Argument number</param>
          * <returns>The role with the given argument number n.</returns>
          */
-        public Role GetRoleWithArgument(string n){
+        public Role GetRoleWithArgument(string n)
+        {
             foreach (var role in _roles)
             {
-                if (role.GetN() == n){
+                if (role.GetN() == n)
+                {
                     return role;
                 }
             }
+
             return null;
         }
 
@@ -79,9 +87,9 @@ namespace PropBank
          *
          * <returns>the size of the roles {@link ArrayList}.</returns>
          */
-        public int Size(){
+        public int Size()
+        {
             return _roles.Count;
         }
-
     }
 }

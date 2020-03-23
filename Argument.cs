@@ -12,11 +12,15 @@ namespace PropBank
          *
          * <param name="argument"> Argument string containing the argumentType and id</param>
          */
-        public Argument(string argument){
-            if (argument.Contains("$")){
+        public Argument(string argument)
+        {
+            if (argument.Contains("$"))
+            {
                 _argumentType = argument.Substring(0, argument.IndexOf("$"));
                 _id = argument.Substring(argument.IndexOf("$") + 1);
-            } else {
+            }
+            else
+            {
                 _argumentType = "NONE";
             }
         }
@@ -27,7 +31,8 @@ namespace PropBank
          * <param name="argumentType"> Type of the argument</param>
          * <param name="id"> Id of the argument</param>
          */
-        public Argument(string argumentType, string id){
+        public Argument(string argumentType, string id)
+        {
             this._argumentType = argumentType;
             this._id = id;
         }
@@ -37,7 +42,8 @@ namespace PropBank
          *
          * <returns>argumentType.</returns>
          */
-        public string GetArgumentType(){
+        public string GetArgumentType()
+        {
             return _argumentType;
         }
 
@@ -46,7 +52,8 @@ namespace PropBank
          *
          * <returns>id.</returns>
          */
-        public string GetId(){
+        public string GetId()
+        {
             return _id;
         }
 
@@ -58,12 +65,12 @@ namespace PropBank
          */
         public override string ToString()
         {
-            if (_argumentType == "NONE"){
+            if (_argumentType == "NONE")
+            {
                 return _argumentType;
             }
 
             return _argumentType + "$" + _id;
         }
-
     }
 }

@@ -8,7 +8,8 @@ namespace PropBank
          * <param name="argumentsType"> Type of the argument in string form</param>
          * <returns>Type of the argument in {@link ArgumentType} form</returns>
          */
-        public static ArgumentType GetArguments(string argumentsType){
+        public static ArgumentType GetArguments(string argumentsType)
+        {
             switch (argumentsType)
             {
                 case "ARG0":
@@ -49,15 +50,17 @@ namespace PropBank
                     return ArgumentType.NONE;
             }
         }
-        
+
         /**
          * <summary>The getPropbankType method takes an argumentType in {@link ArgumentType} form and returns the string form of it.</summary>
          *
          * <param name="argumentType"> Type of the argument in {@link ArgumentType} form</param>
          * <returns>Type of the argument in string form</returns>
          */
-        public static string GetPropbankType(ArgumentType argumentType){
-            switch (argumentType){
+        public static string GetPropbankType(ArgumentType argumentType)
+        {
+            switch (argumentType)
+            {
                 case ArgumentType.ARG0:
                     return "ARG0";
                 case ArgumentType.ARG1:
@@ -96,6 +99,5 @@ namespace PropBank
                     return "NONE";
             }
         }
-        
     }
 }

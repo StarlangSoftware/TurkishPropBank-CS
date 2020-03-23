@@ -13,7 +13,8 @@ namespace PropBank
          * <param name="definition"> Definition of the frameset argument</param>
          * <param name="function"> Function of the frameset argument</param>
          */
-        public FramesetArgument(string argumentType, string definition, string function) {
+        public FramesetArgument(string argumentType, string definition, string function)
+        {
             this._argumentType = argumentType;
             this._definition = definition;
             this._function = function;
@@ -24,7 +25,8 @@ namespace PropBank
          *
          * <returns>argumentType.</returns>
          */
-        public string GetArgumentType() {
+        public string GetArgumentType()
+        {
             return _argumentType;
         }
 
@@ -33,7 +35,8 @@ namespace PropBank
          *
          * <returns>function.</returns>
          */
-        public string GetFunction() {
+        public string GetFunction()
+        {
             return _function;
         }
 
@@ -42,7 +45,8 @@ namespace PropBank
          *
          * <returns>definition.</returns>
          */
-        public string GetDefinition() {
+        public string GetDefinition()
+        {
             return _definition;
         }
 
@@ -51,7 +55,8 @@ namespace PropBank
          *
          * <param name="definition">to set.</param>
          */
-        public void SetDefinition(string definition) {
+        public void SetDefinition(string definition)
+        {
             this._definition = definition;
         }
 
@@ -60,7 +65,8 @@ namespace PropBank
          *
          * <param name="function">to set.</param>
          */
-        public void SetFunction(string function) {
+        public void SetFunction(string function)
+        {
             this._function = function;
         }
 
@@ -70,9 +76,9 @@ namespace PropBank
          *
          * <returns>string form of frameset argument</returns>
          */
-        public override string ToString(){
+        public override string ToString()
+        {
             return _argumentType + ":" + _definition;
         }
-
     }
 }
