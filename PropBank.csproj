@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netcoreapp2.2</TargetFramework>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <PackageId>NlpToolkit-PropBank</PackageId>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <None Remove="files-turkish.txt" />
+      <EmbeddedResource Include="files-turkish.txt" />
+      <None Remove="files-english.txt" />
+      <EmbeddedResource Include="files-english.txt" />
+    </ItemGroup>
+
+</Project>
