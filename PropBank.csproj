@@ -11,6 +11,10 @@
       <EmbeddedResource Include="files-turkish.txt" />
       <None Remove="files-english.txt" />
       <EmbeddedResource Include="files-english.txt" />
-    </ItemGroup>
+      <None Remove="Frames-Turkish\*.xml" />
+      <EmbeddedResource Include="Frames-Turkish\*.xml" />
+      <None Remove="Frames-English\*.xml" />
+      <EmbeddedResource Include="Frames-English\*.xml" />
+	</ItemGroup>
 
 </Project>
