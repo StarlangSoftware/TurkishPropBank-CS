@@ -1,0 +1,10 @@
+<frameset>
+  <predicate lemma="wrack">
+    <roleset id="wrack.01" name="to cause the ruin of">
+      <roles>
+        <role descr="causer" f="pag" n="0"/>
+        <role descr="entity wracked" f="ppt" n="1"/>
+      </roles>
+    </roleset>
+  </predicate>
+</frameset>

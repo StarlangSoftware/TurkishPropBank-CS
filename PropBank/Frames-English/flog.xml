@@ -1,0 +1,10 @@
+<frameset>
+  <predicate lemma="flog">
+    <roleset id="flog.01" name="hit repeatedly">
+      <roles>
+        <role descr="hitter" f="pag" n="0"/>
+        <role descr="victim" f="ppt" n="1"/>
+      </roles>
+    </roleset>
+  </predicate>
+</frameset>

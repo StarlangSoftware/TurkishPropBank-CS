@@ -1,0 +1,10 @@
+<frameset>
+  <predicate lemma="disassemble">
+    <roleset id="disassemble.01" name="to take apart">
+      <roles>
+        <role descr="agent, disassembler" f="pag" n="0"/>
+        <role descr="thing disassembled" f="ppt" n="1"/>
+      </roles>
+    </roleset>
+  </predicate>
+</frameset>

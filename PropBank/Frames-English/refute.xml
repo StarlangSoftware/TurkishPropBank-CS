@@ -1,0 +1,10 @@
+<frameset>
+  <predicate lemma="refute">
+    <roleset id="refute.01" name="to deny or prove to be false">
+      <roles>
+        <role descr="denier, prover, agent" f="pag" n="0"/>
+        <role descr="entity refuted" f="ppt" n="1"/>
+      </roles>
+    </roleset>
+  </predicate>
+</frameset>

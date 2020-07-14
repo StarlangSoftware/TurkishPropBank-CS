@@ -1,0 +1,10 @@
+<frameset>
+  <predicate lemma="debug">
+    <roleset id="debug.01" name="remove faults from">
+      <roles>
+        <role descr="debugger" f="pag" n="0"/>
+        <role descr="software, machine" f="dir" n="1"/>
+      </roles>
+    </roleset>
+  </predicate>
+</frameset>

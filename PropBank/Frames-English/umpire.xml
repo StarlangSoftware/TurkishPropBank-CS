@@ -1,0 +1,10 @@
+<frameset>
+  <predicate lemma="umpire">
+    <roleset id="umpire.01" name="umpire">
+      <roles>
+        <role descr="umpire, agent" f="pag" n="0"/>
+        <role descr="game umpired, theme" f="gol" n="1"/>
+      </roles>
+    </roleset>
+  </predicate>
+</frameset>

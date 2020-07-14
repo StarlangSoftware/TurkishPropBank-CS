@@ -1,0 +1,10 @@
+<frameset>
+  <predicate lemma="shellac">
+    <roleset id="shellac.01" name="shellac">
+      <roles>
+        <role descr="shellacker, agent" f="pag" n="0"/>
+        <role descr="thing shellacked, patient" f="ppt" n="1"/>
+      </roles>
+    </roleset>
+  </predicate>
+</frameset>

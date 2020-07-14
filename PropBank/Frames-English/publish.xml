@@ -1,0 +1,10 @@
+<frameset>
+  <predicate lemma="publish">
+    <roleset id="publish.01" name="publish">
+      <roles>
+        <role descr="publisher" f="pag" n="0"/>
+        <role descr="book, report" f="prd" n="1"/>
+      </roles>
+    </roleset>
+  </predicate>
+</frameset>

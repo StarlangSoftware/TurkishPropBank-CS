@@ -1,0 +1,10 @@
+<frameset>
+  <predicate lemma="retry">
+    <roleset id="retry.01" name="lawsuit">
+      <roles>
+        <role descr="Litigant" f="pag" n="0"/>
+        <role descr="Lawsuit" f="ppt" n="1"/>
+      </roles>
+    </roleset>
+  </predicate>
+</frameset>

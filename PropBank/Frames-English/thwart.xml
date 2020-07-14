@@ -1,0 +1,10 @@
+<frameset>
+  <predicate lemma="thwart">
+    <roleset id="thwart.01" name="prevent">
+      <roles>
+        <role descr="thwarter" f="pag" n="0"/>
+        <role descr="thwartee" f="ppt" n="1"/>
+      </roles>
+    </roleset>
+  </predicate>
+</frameset>

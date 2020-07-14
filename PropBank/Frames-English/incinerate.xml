@@ -1,0 +1,10 @@
+<frameset>
+  <predicate lemma="incinerate">
+    <roleset id="incinerate.01" name="(cause to) burn up">
+      <roles>
+        <role descr="pyromaniac" f="pag" n="0"/>
+        <role descr="thing burnt" f="ppt" n="1"/>
+      </roles>
+    </roleset>
+  </predicate>
+</frameset>

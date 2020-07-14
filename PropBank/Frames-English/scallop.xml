@@ -1,0 +1,10 @@
+<frameset>
+  <predicate lemma="scallop">
+    <roleset id="scallop.01" name="form scallops">
+      <roles>
+        <role descr="causer of scalloping" f="pag" n="0"/>
+        <role descr="scalloped entity" f="ppt" n="1"/>
+      </roles>
+    </roleset>
+  </predicate>
+</frameset>

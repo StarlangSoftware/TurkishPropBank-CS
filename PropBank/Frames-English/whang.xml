@@ -1,0 +1,11 @@
+<frameset>
+  <predicate lemma="whang">
+    <roleset id="whang.01" name="beat or attack with force">
+      <roles>
+        <role descr="Attacker" f="pag" n="0"/>
+        <role descr="Thing hit or attacked" f="ppt" n="1"/>
+        <role descr="Instrument" f="mnr" n="2"/>
+      </roles>
+    </roleset>
+  </predicate>
+</frameset>

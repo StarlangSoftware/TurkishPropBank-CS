@@ -1,0 +1,10 @@
+<frameset>
+  <predicate lemma="unearth">
+    <roleset id="unearth.01" name="to uncover">
+      <roles>
+        <role descr="agent, causer" f="pag" n="0"/>
+        <role descr="thing uncovered" f="ppt" n="1"/>
+      </roles>
+    </roleset>
+  </predicate>
+</frameset>

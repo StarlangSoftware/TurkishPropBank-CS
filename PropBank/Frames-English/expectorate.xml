@@ -1,0 +1,10 @@
+<frameset>
+  <predicate lemma="expectorate">
+    <roleset id="expectorate.01" name="spit">
+      <roles>
+        <role descr="spitter" f="pag" n="0"/>
+        <role descr="loogey" f="ppt" n="1"/>
+      </roles>
+    </roleset>
+  </predicate>
+</frameset>

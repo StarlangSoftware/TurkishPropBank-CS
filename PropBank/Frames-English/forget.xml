@@ -1,0 +1,10 @@
+<frameset>
+  <predicate lemma="forget">
+    <roleset id="forget.01" name="not remember">
+      <roles>
+        <role descr="forgetter" f="pag" n="0"/>
+        <role descr="thing forgotten" f="ppt" n="1"/>
+      </roles>
+    </roleset>
+  </predicate>
+</frameset>

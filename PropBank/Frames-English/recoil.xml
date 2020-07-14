@@ -1,0 +1,10 @@
+<frameset>
+  <predicate lemma="recoil">
+    <roleset id="recoil.01" name="flinch, draw back">
+      <roles>
+        <role descr="one who recoils" f="ppt" n="0"/>
+        <role descr="cause for recoil" f="pag" n="1"/>
+      </roles>
+    </roleset>
+  </predicate>
+</frameset>
