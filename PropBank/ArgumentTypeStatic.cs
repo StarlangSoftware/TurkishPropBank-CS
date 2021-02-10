@@ -10,7 +10,7 @@ namespace PropBank
          */
         public static ArgumentType GetArguments(string argumentsType)
         {
-            switch (argumentsType)
+            switch (argumentsType.ToUpper())
             {
                 case "ARG0":
                     return ArgumentType.ARG0;
