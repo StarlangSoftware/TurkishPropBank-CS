@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.IO;
+using System.Xml;
 
 namespace PropBank
 {
@@ -15,13 +16,12 @@ namespace PropBank
         {
             _frames = new List<Frameset>();
             var assembly = typeof(FramesetList).Assembly;
-            var fileListStream = assembly.GetManifestResourceStream("PropBank.files-turkish.txt");
-            var streamReader = new StreamReader(fileListStream);
-            var line = streamReader.ReadLine();
-            while (line != null)
+            var fileListStream = assembly.GetManifestResourceStream("PropBank.turkish-propbank.xml");
+            var doc = new XmlDocument();
+            doc.Load(fileListStream);
+            foreach (XmlNode frameSetNode in doc.DocumentElement.ChildNodes)
             {
-                _frames.Add(new Frameset(assembly.GetManifestResourceStream("PropBank.Frames_Turkish." + line)));
-                line = streamReader.ReadLine();
+                _frames.Add(new Frameset(frameSetNode));
             }
         }
 

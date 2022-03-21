@@ -4,7 +4,7 @@
         <TargetFramework>netcoreapp2.2</TargetFramework>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
         <PackageId>NlpToolkit-PropBank</PackageId>
-        <PackageVersion>1.0.4</PackageVersion>
+        <PackageVersion>1.0.5</PackageVersion>
     </PropertyGroup>
 
     <ItemGroup>
@@ -16,6 +16,10 @@
       <EmbeddedResource Include="Frames-Turkish\*.xml" />
       <None Remove="Frames-English\*.xml" />
       <EmbeddedResource Include="Frames-English\*.xml" />
+      <None Remove="turkish-propbank.xml" />
+      <EmbeddedResource Include="turkish-propbank.xml" />
+      <None Remove="english-propbank.xml" />
+      <EmbeddedResource Include="english-propbank.xml" />
 	</ItemGroup>
 
 </Project>

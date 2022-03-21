@@ -23,19 +23,17 @@ namespace PropBank
         /**
          * <summary>Another constructor of {@link Frameset} class which takes inputStream as input and reads the frameset</summary>
          *
-         * <param name="stream"> inputStream to read frameset</param>
+         * <param name="frameSetNode"> input XmlNode to read frameset</param>
          */
-        public Frameset(Stream stream)
+        public Frameset(XmlNode frameSetNode)
         {
-            XmlDocument doc = new XmlDocument();
-            doc.Load(stream);
-            _id = doc.DocumentElement.Attributes["id"].Value;
+            _id = frameSetNode.Attributes["id"].Value;
             _framesetArguments = new List<FramesetArgument>();
-            foreach (XmlNode argumentNode in doc.DocumentElement.ChildNodes)
+            foreach (XmlNode argumentNode in frameSetNode.ChildNodes)
             {
-                string argumentType = argumentNode.Attributes["name"].Value;
-                string function = argumentNode.Attributes["function"].Value;
-                string definition = argumentNode.InnerText;
+                var argumentType = argumentNode.Attributes["name"].Value;
+                var function = argumentNode.Attributes["function"].Value;
+                var definition = argumentNode.InnerText;
                 _framesetArguments.Add(new FramesetArgument(argumentType, definition, function));
             }
         }
@@ -65,10 +63,11 @@ namespace PropBank
          *
          * <param name="type"> Type of the new {@link FramesetArgument}</param>
          * <param name="definition">Definition of the new {@link FramesetArgument}</param>
+         * <param name="function">Function of the new {@link FramesetArgument}</param>
          */
         public void AddArgument(string type, string definition, string function)
         {
-            bool check = false;
+            var check = false;
             foreach (var a in _framesetArguments)
             {
                 if (a.GetArgumentType() == type)
