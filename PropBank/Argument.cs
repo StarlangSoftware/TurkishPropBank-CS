@@ -1,3 +1,5 @@
+using System;
+
 namespace PropBank
 {
     public class Argument
@@ -16,8 +18,8 @@ namespace PropBank
         {
             if (argument.Contains("$"))
             {
-                _argumentType = argument.Substring(0, argument.IndexOf("$"));
-                _id = argument.Substring(argument.IndexOf("$") + 1);
+                _argumentType = argument.Substring(0, argument.IndexOf("$", StringComparison.Ordinal));
+                _id = argument.Substring(argument.IndexOf("$", StringComparison.Ordinal) + 1);
             }
             else
             {
