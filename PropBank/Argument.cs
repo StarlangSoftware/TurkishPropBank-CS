@@ -5,7 +5,7 @@ namespace PropBank
     public class Argument
     {
         private readonly string _argumentType;
-        private readonly string _id;
+        private string _id;
 
         /**
          * <summary>A constructor of {@link Argument} class which takes argument string which is in the form of argumentType$id
@@ -74,5 +74,13 @@ namespace PropBank
 
             return _argumentType + "$" + _id;
         }
+        
+        /**
+         * Setter for the id
+         * @param id New id of the argument
+         */
+        public void SetId(string id) { 
+            _id = id;
+        }        
     }
 }
