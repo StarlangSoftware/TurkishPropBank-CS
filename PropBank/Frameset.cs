@@ -31,10 +31,19 @@ namespace PropBank
             _framesetArguments = new List<FramesetArgument>();
             foreach (XmlNode argumentNode in frameSetNode.ChildNodes)
             {
+                string grammaticalCase;
                 var argumentType = argumentNode.Attributes["name"].Value;
                 var function = argumentNode.Attributes["function"].Value;
                 var definition = argumentNode.InnerText;
-                _framesetArguments.Add(new FramesetArgument(argumentType, definition, function));
+                if (argumentNode.Attributes["grammaticalCase"] != null)
+                {
+                    grammaticalCase = argumentNode.Attributes["grammaticalCase"].Value;
+                }
+                else
+                {
+                    grammaticalCase = "";
+                }
+                _framesetArguments.Add(new FramesetArgument(argumentType, definition, function, grammaticalCase));
             }
         }
         
@@ -65,7 +74,7 @@ namespace PropBank
          * <param name="definition">Definition of the new {@link FramesetArgument}</param>
          * <param name="function">Function of the new {@link FramesetArgument}</param>
          */
-        public void AddArgument(string type, string definition, string function)
+        public void AddArgument(string type, string definition, string function, string grammaticalCase)
         {
             var check = false;
             foreach (var a in _framesetArguments)
@@ -80,7 +89,7 @@ namespace PropBank
 
             if (!check)
             {
-                FramesetArgument arg = new FramesetArgument(type, definition, function);
+                var arg = new FramesetArgument(type, definition, function, grammaticalCase);
                 _framesetArguments.Add(arg);
             }
         }

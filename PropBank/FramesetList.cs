@@ -13,7 +13,7 @@ namespace PropBank
          */
         public FramesetList()
         {
-            _frames = new List<Frameset>();
+            _frames = [];
             var assembly = typeof(FramesetList).Assembly;
             var fileListStream = assembly.GetManifestResourceStream("PropBank.turkish-propbank.xml");
             var doc = new XmlDocument();

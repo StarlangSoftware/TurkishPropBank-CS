@@ -17,21 +17,80 @@ namespace Test
         [Test]
         public void TestFrames()
         {
-            Assert.AreEqual(17691, framesetList.Size());
+            Assert.AreEqual(17692, framesetList.Size());
         }
 
         [Test]
         public void TestArgSize()
         {
-            int count = 0;
-            for (int i = 0; i < framesetList.Size(); i++)
+            var count = 0;
+            for (var i = 0; i < framesetList.Size(); i++)
             {
                 count += framesetList.GetFrameSet(i).GetFramesetArguments().Count;
             }
 
-            Assert.AreEqual(29759, count);
+            Assert.AreEqual(29761, count);
         }
 
+        private void UpdateHashMap(Dictionary<string, int> map, string value){
+            if (map.ContainsKey(value)){
+                map[value] = map[value] + 1;
+            } else {
+                map[value] = 1;
+            }
+        }
+
+        [Test]
+        public void TestCase()
+        {
+            var caseList = new Dictionary<string, int>();
+            for (var i = 0; i < framesetList.Size(); i++)
+            {
+                foreach (var argument in framesetList.GetFrameSet(i).GetFramesetArguments())
+                {
+                    if (argument.GetGrammaticalCase().Length != 0)
+                    {
+                        if (argument.GetGrammaticalCase().Contains("abl"))
+                        {
+                            UpdateHashMap(caseList, "abl");
+                        }
+                        if (argument.GetGrammaticalCase().Contains("acc"))
+                        {
+                            UpdateHashMap(caseList, "acc");
+                        }
+                        if (argument.GetGrammaticalCase().Contains("dat"))
+                        {
+                            UpdateHashMap(caseList, "dat");
+                        }
+                        if (argument.GetGrammaticalCase().Contains("gen"))
+                        {
+                            UpdateHashMap(caseList, "gen");
+                        }
+                        if (argument.GetGrammaticalCase().Contains("ins"))
+                        {
+                            UpdateHashMap(caseList, "ins");
+                        }
+                        if (argument.GetGrammaticalCase().Contains("loc"))
+                        {
+                            UpdateHashMap(caseList, "loc");
+                        }
+                        if (argument.GetGrammaticalCase().Contains("nom"))
+                        {
+                            UpdateHashMap(caseList, "nom");
+                        }
+                    }
+                }
+            }
+
+            Assert.AreEqual(422, caseList["abl"]);
+            Assert.AreEqual(4690, caseList["acc"]);
+            Assert.AreEqual(2423, caseList["dat"]);
+            Assert.AreEqual(880, caseList["gen"]);
+            Assert.AreEqual(459, caseList["ins"]);
+            Assert.AreEqual(673, caseList["loc"]);
+            Assert.AreEqual(2069, caseList["nom"]);
+        }
+        
         [Test]
         public void TestArgName()
         {
@@ -40,19 +99,12 @@ namespace Test
             {
                 foreach (var argument in framesetList.GetFrameSet(i).GetFramesetArguments())
                 {
-                    if (nameList.ContainsKey(argument.GetArgumentType()))
-                    {
-                        nameList[argument.GetArgumentType()] = nameList[argument.GetArgumentType()] + 1;
-                    }
-                    else
-                    {
-                        nameList.Add(argument.GetArgumentType(), 1);
-                    }
+                    UpdateHashMap(nameList, argument.GetArgumentType());
                 }
             }
 
-            Assert.AreEqual(14668, nameList["ARG0"]);
-            Assert.AreEqual(13126, nameList["ARG1"]);
+            Assert.AreEqual(14669, nameList["ARG0"]);
+            Assert.AreEqual(13127, nameList["ARG1"]);
             Assert.AreEqual(1886, nameList["ARG2"]);
             Assert.AreEqual(78, nameList["ARG3"]);
             Assert.AreEqual(1, nameList["ARG4"]);
@@ -66,14 +118,7 @@ namespace Test
             {
                 foreach (var argument in framesetList.GetFrameSet(i).GetFramesetArguments())
                 {
-                    if (functionList.ContainsKey(argument.GetFunction()))
-                    {
-                        functionList[argument.GetFunction()] = functionList[argument.GetFunction()] + 1;
-                    }
-                    else
-                    {
-                        functionList.Add(argument.GetFunction(), 1);
-                    }
+                    UpdateHashMap(functionList, argument.GetFunction());
                 }
             }
 
@@ -82,11 +127,11 @@ namespace Test
             Assert.AreEqual(814, functionList["loc"]);
             Assert.AreEqual(198, functionList["rec"]);
             Assert.AreEqual(14, functionList["pat"]);
-            Assert.AreEqual(10687, functionList["ppt"]);
+            Assert.AreEqual(10688, functionList["ppt"]);
             Assert.AreEqual(605, functionList["src"]);
             Assert.AreEqual(801, functionList["gol"]);
             Assert.AreEqual(156, functionList["tmp"]);
-            Assert.AreEqual(14557, functionList["pag"]);
+            Assert.AreEqual(14558, functionList["pag"]);
             Assert.AreEqual(1432, functionList["dir"]);
         }
     }

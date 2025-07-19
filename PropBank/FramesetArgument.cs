@@ -5,6 +5,7 @@ namespace PropBank
         private readonly string _argumentType;
         private string _function;
         private string _definition;
+        private string _grammaticalCase;
 
         /**
          * <summary>A constructor of {@link FramesetArgument} class which takes argumentType and definition as input and initializes corresponding attributes</summary>
@@ -12,12 +13,14 @@ namespace PropBank
          * <param name="argumentType"> ArgumentType of the frameset argument</param>
          * <param name="definition"> Definition of the frameset argument</param>
          * <param name="function"> Function of the frameset argument</param>
+         * <param name="grammaticalCase"> Grammatical case of the frameset argument</param>
          */
-        public FramesetArgument(string argumentType, string definition, string function)
+        public FramesetArgument(string argumentType, string definition, string function, string grammaticalCase)
         {
             this._argumentType = argumentType;
             this._definition = definition;
             this._function = function;
+            this._grammaticalCase = grammaticalCase;
         }
 
         /**
@@ -51,6 +54,16 @@ namespace PropBank
         }
 
         /**
+         * <summary>Accessor for grammatical case.</summary>
+         *
+         * <returns>Grammatical case.</returns>
+         * */
+        public string GetGrammaticalCase()
+        {
+            return _grammaticalCase;
+        }
+
+        /**
          * <summary>Mutator for definition.</summary>
          *
          * <param name="definition">to set.</param>
@@ -68,6 +81,16 @@ namespace PropBank
         public void SetFunction(string function)
         {
             this._function = function;
+        }
+
+        /**
+         * <summary>Mutator for grammatical case.</summary>
+         *
+         * <param name="grammaticalCase">to set.</param>
+         */
+        public void SetGrammaticalCase(string grammaticalCase)
+        {
+            this._grammaticalCase = grammaticalCase;
         }
 
         /**
