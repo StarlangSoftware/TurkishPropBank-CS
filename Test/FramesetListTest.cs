@@ -17,7 +17,7 @@ namespace Test
         [Test]
         public void TestFrames()
         {
-            Assert.AreEqual(17692, framesetList.Size());
+            Assert.AreEqual(17531, framesetList.Size());
         }
 
         [Test]
@@ -29,7 +29,7 @@ namespace Test
                 count += framesetList.GetFrameSet(i).GetFramesetArguments().Count;
             }
 
-            Assert.AreEqual(29761, count);
+            Assert.AreEqual(29473, count);
         }
 
         private void UpdateHashMap(Dictionary<string, int> map, string value){
@@ -82,13 +82,13 @@ namespace Test
                 }
             }
 
-            Assert.AreEqual(422, caseList["abl"]);
-            Assert.AreEqual(4690, caseList["acc"]);
-            Assert.AreEqual(2423, caseList["dat"]);
-            Assert.AreEqual(880, caseList["gen"]);
-            Assert.AreEqual(459, caseList["ins"]);
-            Assert.AreEqual(673, caseList["loc"]);
-            Assert.AreEqual(2069, caseList["nom"]);
+            Assert.AreEqual(418, caseList["abl"]);
+            Assert.AreEqual(4633, caseList["acc"]);
+            Assert.AreEqual(2402, caseList["dat"]);
+            Assert.AreEqual(870, caseList["gen"]);
+            Assert.AreEqual(451, caseList["ins"]);
+            Assert.AreEqual(666, caseList["loc"]);
+            Assert.AreEqual(2049, caseList["nom"]);
         }
         
         [Test]
@@ -103,10 +103,10 @@ namespace Test
                 }
             }
 
-            Assert.AreEqual(14669, nameList["ARG0"]);
-            Assert.AreEqual(13127, nameList["ARG1"]);
-            Assert.AreEqual(1886, nameList["ARG2"]);
-            Assert.AreEqual(78, nameList["ARG3"]);
+            Assert.AreEqual(14535, nameList["ARG0"]);
+            Assert.AreEqual(12996, nameList["ARG1"]);
+            Assert.AreEqual(1865, nameList["ARG2"]);
+            Assert.AreEqual(76, nameList["ARG3"]);
             Assert.AreEqual(1, nameList["ARG4"]);
         }
 
@@ -122,17 +122,17 @@ namespace Test
                 }
             }
 
-            Assert.AreEqual(481, functionList["com"]);
+            Assert.AreEqual(475, functionList["com"]);
             Assert.AreEqual(14, functionList["ext"]);
-            Assert.AreEqual(814, functionList["loc"]);
-            Assert.AreEqual(198, functionList["rec"]);
-            Assert.AreEqual(14, functionList["pat"]);
-            Assert.AreEqual(10688, functionList["ppt"]);
-            Assert.AreEqual(605, functionList["src"]);
-            Assert.AreEqual(801, functionList["gol"]);
+            Assert.AreEqual(808, functionList["loc"]);
+            Assert.AreEqual(195, functionList["rec"]);
+            Assert.AreEqual(13, functionList["pat"]);
+            Assert.AreEqual(10579, functionList["ppt"]);
+            Assert.AreEqual(597, functionList["src"]);
+            Assert.AreEqual(794, functionList["gol"]);
             Assert.AreEqual(156, functionList["tmp"]);
-            Assert.AreEqual(14558, functionList["pag"]);
-            Assert.AreEqual(1432, functionList["dir"]);
+            Assert.AreEqual(14425, functionList["pag"]);
+            Assert.AreEqual(1417, functionList["dir"]);
         }
     }
 }
